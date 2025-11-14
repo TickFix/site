@@ -12,7 +12,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="gradient-header shadow-lg">
+    <nav className="bg-gradient-to-r from-[#1A2332] to-[#1E88E5] shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo y título */}
