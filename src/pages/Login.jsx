@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { authService } from '../services/authService';
+import logo from '../assets/logo.png';
 
 export const Login = () => {
   const [formData, setFormData] = useState({
@@ -40,6 +41,15 @@ export const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        {/* Logo */}
+        <div className="flex justify-center mb-6">
+          <img 
+            src={logo} 
+            alt="TiqFix Logo" 
+            className="h-20 w-auto"
+          />
+        </div>
+
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
           Iniciar Sesión
         </h2>
