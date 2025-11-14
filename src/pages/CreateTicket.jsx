@@ -118,7 +118,7 @@ export const CreateTicket = () => {
                 value={formData.category}
                 onChange={handleCategoryChange}
                 required
-                className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+                className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
               >
                 <option value="">Selecciona una categoría</option>
                 {categories.map((cat, index) => (
@@ -140,7 +140,7 @@ export const CreateTicket = () => {
                   value={formData.subcategory}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+                  className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
                 >
                   <option value="">Selecciona una subcategoría</option>
                   {selectedCategory.subcategories.map((sub, index) => (
@@ -163,7 +163,7 @@ export const CreateTicket = () => {
                 onChange={handleChange}
                 required
                 rows="5"
-                className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+                className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
                 placeholder="Describe detalladamente el problema..."
               />
             </div>
@@ -177,7 +177,7 @@ export const CreateTicket = () => {
                 <input
                   type="file"
                   onChange={handleFileChange}
-                  className="flex-1 px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-[#00BCD4] file:text-white file:cursor-pointer hover:file:bg-[#00ACC1] focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+                  className="flex-1 px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-[#1E88E5] file:text-white file:cursor-pointer hover:file:bg-[#1976D2] focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
                 />
                 <button
                   type="button"
@@ -199,7 +199,7 @@ export const CreateTicket = () => {
             <button
               type="submit"
               disabled={creating || !formData.category || !formData.subcategory}
-              className="w-full bg-[#00BCD4] text-white py-3 rounded hover:bg-[#00ACC1] disabled:bg-gray-600 disabled:cursor-not-allowed font-semibold transition-colors"
+              className="w-full bg-[#1E88E5] text-white py-3 rounded hover:bg-[#1976D2] disabled:bg-gray-600 disabled:cursor-not-allowed font-semibold transition-colors"
             >
               {creating ? 'Creando Ticket...' : 'Crear Ticket'}
             </button>

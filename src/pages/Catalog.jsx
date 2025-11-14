@@ -77,7 +77,7 @@ export const Catalog = () => {
           </h1>
           <button
             onClick={() => setShowForm(!showForm)}
-            className="bg-[#00BCD4] text-white px-4 py-2 rounded hover:bg-[#00ACC1] transition-colors"
+            className="bg-[#1E88E5] text-white px-4 py-2 rounded hover:bg-[#1976D2] transition-colors"
           >
             {showForm ? 'Cancelar' : 'Nueva Categoría'}
           </button>
@@ -110,7 +110,7 @@ export const Catalog = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+                  className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
                   placeholder="ej: Hardware"
                 />
               </div>
@@ -125,7 +125,7 @@ export const Catalog = () => {
                   value={formData.subcategories}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+                  className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
                   placeholder="ej: Laptop, Desktop, Impresora, Monitor"
                 />
                 <p className="text-sm text-gray-500 mt-1">
@@ -135,7 +135,7 @@ export const Catalog = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#00BCD4] text-white py-2 rounded hover:bg-[#00ACC1] transition-colors"
+                className="w-full bg-[#1E88E5] text-white py-2 rounded hover:bg-[#1976D2] transition-colors"
               >
                 Crear Categoría
               </button>
@@ -157,7 +157,7 @@ export const Catalog = () => {
                 {categories.map((category, index) => (
                   <div
                     key={index}
-                    className="border border-gray-600 rounded-lg p-4 hover:shadow-md transition-shadow hover:border-[#00BCD4]"
+                    className="border border-gray-600 rounded-lg p-4 hover:shadow-md transition-shadow hover:border-[#1E88E5]"
                   >
                     <h3 className="text-lg font-semibold text-white mb-2">
                       {category.name}
@@ -166,7 +166,7 @@ export const Catalog = () => {
                       {category.subcategories.map((sub, subIndex) => (
                         <span
                           key={subIndex}
-                          className="bg-[#00BCD4]/20 text-[#00BCD4] px-3 py-1 rounded-full text-sm border border-[#00BCD4]/30"
+                          className="bg-[#1E88E5]/20 text-[#1E88E5] px-3 py-1 rounded-full text-sm border border-[#1E88E5]/30"
                         >
                           {sub}
                         </span>

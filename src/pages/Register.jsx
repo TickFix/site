@@ -68,7 +68,7 @@ export const Register = () => {
               value={formData.firstname}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
             />
           </div>
 
@@ -80,7 +80,7 @@ export const Register = () => {
               value={formData.lastname}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
             />
           </div>
 
@@ -92,7 +92,7 @@ export const Register = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
             />
           </div>
 
@@ -103,7 +103,7 @@ export const Register = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
             />
           </div>
 
@@ -115,7 +115,7 @@ export const Register = () => {
               value={formData.password}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
             />
           </div>
 
@@ -127,14 +127,14 @@ export const Register = () => {
               value={formData.confirmPassword}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#00BCD4] text-white py-2 rounded hover:bg-[#00ACC1] disabled:bg-gray-600 disabled:cursor-not-allowed transition-colors"
+            className="w-full bg-[#1E88E5] text-white py-2 rounded hover:bg-[#1976D2] disabled:bg-gray-600 disabled:cursor-not-allowed transition-colors"
           >
             {loading ? 'Registrando...' : 'Registrarse'}
           </button>
@@ -142,7 +142,7 @@ export const Register = () => {
 
         <p className="mt-4 text-center text-gray-400">
           ¿Ya tienes cuenta?{' '}
-          <Link to="/login" className="text-[#00BCD4] hover:underline">
+          <Link to="/login" className="text-[#1E88E5] hover:underline">
             Inicia sesión aquí
           </Link>
         </p>

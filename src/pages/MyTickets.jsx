@@ -35,7 +35,7 @@ export const MyTickets = () => {
           <h1 className="text-3xl font-bold text-white">Mis Tickets</h1>
           <Link
             to="/tickets/create"
-            className="bg-[#00BCD4] text-white px-4 py-2 rounded hover:bg-[#00ACC1] transition-colors"
+            className="bg-[#1E88E5] text-white px-4 py-2 rounded hover:bg-[#1976D2] transition-colors"
           >
             Crear Nuevo Ticket
           </Link>
@@ -54,7 +54,7 @@ export const MyTickets = () => {
 
             {loading ? (
               <div className="text-center py-12">
-                <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-[#00BCD4]"></div>
+                <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-[#1E88E5]"></div>
                 <p className="text-gray-400 mt-4">Cargando tickets...</p>
               </div>
             ) : tickets.length === 0 ? (
@@ -77,7 +77,7 @@ export const MyTickets = () => {
                 </p>
                 <Link
                   to="/tickets/create"
-                  className="inline-block bg-[#00BCD4] text-white px-6 py-2 rounded hover:bg-[#00ACC1] transition-colors"
+                  className="inline-block bg-[#1E88E5] text-white px-6 py-2 rounded hover:bg-[#1976D2] transition-colors"
                 >
                   Crear mi primer ticket
                 </Link>
@@ -87,7 +87,7 @@ export const MyTickets = () => {
                 {tickets.map((ticket) => (
                   <div
                     key={ticket.id}
-                    className="border border-gray-600 rounded-lg p-4 hover:shadow-md transition-shadow hover:border-[#00BCD4]"
+                    className="border border-gray-600 rounded-lg p-4 hover:shadow-md transition-shadow hover:border-[#1E88E5]"
                   >
                     <div className="flex justify-between items-start mb-2">
                       <div>
@@ -98,7 +98,7 @@ export const MyTickets = () => {
                           {ticket.category} - {ticket.subcategory}
                         </p>
                       </div>
-                      <span className="bg-[#00BCD4]/20 text-[#00BCD4] px-3 py-1 rounded-full text-sm border border-[#00BCD4]/30">
+                      <span className="bg-[#1E88E5]/20 text-[#1E88E5] px-3 py-1 rounded-full text-sm border border-[#1E88E5]/30">
                         Abierto
                       </span>
                     </div>
@@ -146,7 +146,7 @@ export const MyTickets = () => {
             </div>
             <div className="bg-[#1A2332] border border-gray-700 p-4 rounded-lg shadow">
               <p className="text-gray-400 text-sm">Tickets Abiertos</p>
-              <p className="text-2xl font-bold text-[#00BCD4]">{tickets.length}</p>
+              <p className="text-2xl font-bold text-[#1E88E5]">{tickets.length}</p>
             </div>
             <div className="bg-[#1A2332] border border-gray-700 p-4 rounded-lg shadow">
               <p className="text-gray-400 text-sm">Con Archivos</p>

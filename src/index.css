@@ -50,15 +50,15 @@ body {
 }
 
 .input-tiqfix {
-  @apply w-full px-4 py-3 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent;
+  @apply w-full px-4 py-3 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent;
 }
 
 .btn-primary-tiqfix {
-  @apply bg-[#00BCD4] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#00ACC1] disabled:bg-gray-600 disabled:cursor-not-allowed transition-colors;
+  @apply bg-[#1E88E5] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#1976D2] disabled:bg-gray-600 disabled:cursor-not-allowed transition-colors;
 }
 
 .btn-secondary-tiqfix {
-  @apply bg-[#1E88E5] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#1976D2] disabled:bg-gray-600 disabled:cursor-not-allowed transition-colors;
+  @apply bg-[#00BCD4] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#00ACC1] disabled:bg-gray-600 disabled:cursor-not-allowed transition-colors;
 }
 
 .gradient-header {
@@ -66,9 +66,9 @@ body {
 }
 
 .text-accent {
-  @apply text-[#00BCD4];
+  @apply text-[#1E88E5];
 }
 
 .link-tiqfix {
-  @apply text-[#00BCD4] hover:underline transition-colors;
+  @apply text-[#1E88E5] hover:underline transition-colors;
 }

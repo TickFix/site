@@ -69,7 +69,7 @@ export const Login = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
               placeholder="tu@email.com"
             />
           </div>
@@ -82,7 +82,7 @@ export const Login = () => {
               value={formData.password}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
+              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1E88E5] focus:border-transparent"
               placeholder="••••••••"
             />
           </div>
@@ -90,7 +90,7 @@ export const Login = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#00BCD4] text-white py-2 rounded hover:bg-[#00ACC1] disabled:bg-gray-600 disabled:cursor-not-allowed transition-colors"
+            className="w-full bg-[#1E88E5] text-white py-2 rounded hover:bg-[#1976D2] disabled:bg-gray-600 disabled:cursor-not-allowed transition-colors"
           >
             {loading ? 'Iniciando sesión...' : 'Iniciar Sesión'}
           </button>
@@ -98,7 +98,7 @@ export const Login = () => {
 
         <p className="mt-4 text-center text-gray-400">
           ¿No tienes cuenta?{' '}
-          <Link to="/register" className="text-[#00BCD4] hover:underline">
+          <Link to="/register" className="text-[#1E88E5] hover:underline">
             Regístrate aquí
           </Link>
         </p>

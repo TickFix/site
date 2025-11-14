@@ -16,11 +16,11 @@ export const Dashboard = () => {
           {/* Card - Crear Ticket */}
           <Link
             to="/tickets/create"
-            className="bg-[#1A2332] border border-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover:border-[#00BCD4]"
+            className="bg-[#1A2332] border border-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover:border-[#1E88E5]"
           >
             <div className="flex items-center justify-center w-12 h-12 bg-blue-500/20 rounded-full mb-4">
               <svg
-                className="w-6 h-6 text-[#00BCD4]"
+                className="w-6 h-6 text-[#1E88E5]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -40,7 +40,7 @@ export const Dashboard = () => {
           {/* Card - Gestionar Catálogo */}
           <Link
             to="/catalog"
-            className="bg-[#1A2332] border border-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover:border-[#00BCD4]"
+            className="bg-[#1A2332] border border-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover:border-[#1E88E5]"
           >
             <div className="flex items-center justify-center w-12 h-12 bg-green-500/20 rounded-full mb-4">
               <svg
