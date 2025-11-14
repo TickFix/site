@@ -8,7 +8,7 @@ export const Dashboard = () => {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6 text-gray-800">
+        <h1 className="text-3xl font-bold mb-6 text-white">
           Bienvenido, {user?.email?.split('@')[0] || 'Usuario'}
         </h1>
 
@@ -16,11 +16,11 @@ export const Dashboard = () => {
           {/* Card - Crear Ticket */}
           <Link
             to="/tickets/create"
-            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            className="bg-[#1A2332] border border-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover:border-[#00BCD4]"
           >
-            <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
+            <div className="flex items-center justify-center w-12 h-12 bg-blue-500/20 rounded-full mb-4">
               <svg
-                className="w-6 h-6 text-blue-600"
+                className="w-6 h-6 text-[#00BCD4]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -33,18 +33,18 @@ export const Dashboard = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Crear Ticket</h3>
-            <p className="text-gray-600">Reporta un problema o solicita soporte</p>
+            <h3 className="text-xl font-semibold mb-2 text-white">Crear Ticket</h3>
+            <p className="text-gray-400">Reporta un problema o solicita soporte</p>
           </Link>
 
           {/* Card - Gestionar Catálogo */}
           <Link
             to="/catalog"
-            className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            className="bg-[#1A2332] border border-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow hover:border-[#00BCD4]"
           >
-            <div className="flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-4">
+            <div className="flex items-center justify-center w-12 h-12 bg-green-500/20 rounded-full mb-4">
               <svg
-                className="w-6 h-6 text-green-600"
+                className="w-6 h-6 text-green-400"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -57,15 +57,15 @@ export const Dashboard = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Gestionar Catálogo</h3>
-            <p className="text-gray-600">Administra categorías y subcategorías</p>
+            <h3 className="text-xl font-semibold mb-2 text-white">Gestionar Catálogo</h3>
+            <p className="text-gray-400">Administra categorías y subcategorías</p>
           </Link>
 
           {/* Card - Ver Estadísticas */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="flex items-center justify-center w-12 h-12 bg-purple-100 rounded-full mb-4">
+          <div className="bg-[#1A2332] border border-gray-700 p-6 rounded-lg shadow-md">
+            <div className="flex items-center justify-center w-12 h-12 bg-purple-500/20 rounded-full mb-4">
               <svg
-                className="w-6 h-6 text-purple-600"
+                className="w-6 h-6 text-purple-400"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -78,17 +78,17 @@ export const Dashboard = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Estadísticas</h3>
-            <p className="text-gray-600">Próximamente disponible</p>
+            <h3 className="text-xl font-semibold mb-2 text-white">Estadísticas</h3>
+            <p className="text-gray-400">Próximamente disponible</p>
           </div>
         </div>
 
         {/* Quick Info */}
-        <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-4 text-blue-900">
+        <div className="mt-8 bg-[#1A2332] border border-gray-700 rounded-lg p-6">
+          <h2 className="text-xl font-semibold mb-4 text-white">
             Sistema de Gestión de Tickets
           </h2>
-          <ul className="space-y-2 text-blue-800">
+          <ul className="space-y-2 text-gray-300">
             <li>✓ Crea y gestiona tickets de soporte</li>
             <li>✓ Administra el catálogo de categorías</li>
             <li>✓ Sube evidencias y archivos adjuntos</li>

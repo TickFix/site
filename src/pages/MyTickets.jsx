@@ -32,35 +32,35 @@ export const MyTickets = () => {
     <Layout>
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold text-gray-800">Mis Tickets</h1>
+          <h1 className="text-3xl font-bold text-white">Mis Tickets</h1>
           <Link
             to="/tickets/create"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-[#00BCD4] text-white px-4 py-2 rounded hover:bg-[#00ACC1] transition-colors"
           >
             Crear Nuevo Ticket
           </Link>
         </div>
 
         {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+          <div className="bg-red-900/50 border border-red-500 text-red-200 px-4 py-3 rounded mb-4">
             {error}
           </div>
         )}
 
         {/* Tickets List */}
-        <div className="bg-white rounded-lg shadow-md">
+        <div className="bg-[#1A2332] border border-gray-700 rounded-lg shadow-md">
           <div className="p-6">
-            <h2 className="text-xl font-semibold mb-4">Lista de Tickets</h2>
+            <h2 className="text-xl font-semibold text-white mb-4">Lista de Tickets</h2>
 
             {loading ? (
               <div className="text-center py-12">
-                <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                <p className="text-gray-600 mt-4">Cargando tickets...</p>
+                <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-[#00BCD4]"></div>
+                <p className="text-gray-400 mt-4">Cargando tickets...</p>
               </div>
             ) : tickets.length === 0 ? (
               <div className="text-center py-12">
                 <svg
-                  className="w-16 h-16 text-gray-400 mx-auto mb-4"
+                  className="w-16 h-16 text-gray-600 mx-auto mb-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -72,12 +72,12 @@ export const MyTickets = () => {
                     d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                   />
                 </svg>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-400 mb-4">
                   No tienes tickets creados todavía
                 </p>
                 <Link
                   to="/tickets/create"
-                  className="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+                  className="inline-block bg-[#00BCD4] text-white px-6 py-2 rounded hover:bg-[#00ACC1] transition-colors"
                 >
                   Crear mi primer ticket
                 </Link>
@@ -87,24 +87,24 @@ export const MyTickets = () => {
                 {tickets.map((ticket) => (
                   <div
                     key={ticket.id}
-                    className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                    className="border border-gray-600 rounded-lg p-4 hover:shadow-md transition-shadow hover:border-[#00BCD4]"
                   >
                     <div className="flex justify-between items-start mb-2">
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-800">
+                        <h3 className="text-lg font-semibold text-white">
                           Ticket #{ticket.id}
                         </h3>
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm text-gray-400">
                           {ticket.category} - {ticket.subcategory}
                         </p>
                       </div>
-                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                      <span className="bg-[#00BCD4]/20 text-[#00BCD4] px-3 py-1 rounded-full text-sm border border-[#00BCD4]/30">
                         Abierto
                       </span>
                     </div>
-                    <p className="text-gray-700 mb-2">{ticket.description}</p>
+                    <p className="text-gray-300 mb-2">{ticket.description}</p>
                     {ticket.attachment_key && (
-                      <div className="flex items-center text-sm text-gray-500 mb-2">
+                      <div className="flex items-center text-sm text-gray-400 mb-2">
                         <svg
                           className="w-4 h-4 mr-1"
                           fill="none"
@@ -140,17 +140,17 @@ export const MyTickets = () => {
         {/* Stats */}
         {tickets.length > 0 && (
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white p-4 rounded-lg shadow">
-              <p className="text-gray-600 text-sm">Total de Tickets</p>
-              <p className="text-2xl font-bold text-gray-800">{tickets.length}</p>
+            <div className="bg-[#1A2332] border border-gray-700 p-4 rounded-lg shadow">
+              <p className="text-gray-400 text-sm">Total de Tickets</p>
+              <p className="text-2xl font-bold text-white">{tickets.length}</p>
             </div>
-            <div className="bg-white p-4 rounded-lg shadow">
-              <p className="text-gray-600 text-sm">Tickets Abiertos</p>
-              <p className="text-2xl font-bold text-blue-600">{tickets.length}</p>
+            <div className="bg-[#1A2332] border border-gray-700 p-4 rounded-lg shadow">
+              <p className="text-gray-400 text-sm">Tickets Abiertos</p>
+              <p className="text-2xl font-bold text-[#00BCD4]">{tickets.length}</p>
             </div>
-            <div className="bg-white p-4 rounded-lg shadow">
-              <p className="text-gray-600 text-sm">Con Archivos</p>
-              <p className="text-2xl font-bold text-green-600">
+            <div className="bg-[#1A2332] border border-gray-700 p-4 rounded-lg shadow">
+              <p className="text-gray-400 text-sm">Con Archivos</p>
+              <p className="text-2xl font-bold text-green-400">
                 {tickets.filter(t => t.attachment_key).length}
               </p>
             </div>

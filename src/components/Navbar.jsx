@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import logo from '../assets/logo.png';
 
 export const Navbar = () => {
   const { isAuthenticated, user, logout } = useAuth();
@@ -11,46 +12,71 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="bg-blue-600 text-white shadow-lg">
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold">
-            TiqFix
+    <nav className="gradient-header shadow-lg">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo y título */}
+          <Link 
+            to={isAuthenticated ? "/dashboard" : "/"} 
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
+          >
+            <img src={logo} alt="TiqFix" className="h-10 w-auto" />
+            <span className="text-white text-2xl font-bold">TiqFix</span>
           </Link>
 
+          {/* Menu de navegación */}
           <div className="flex items-center gap-6">
             {isAuthenticated ? (
               <>
-                <Link to="/dashboard" className="hover:text-blue-200">
+                <Link
+                  to="/dashboard"
+                  className="text-white hover:text-gray-200 transition-colors font-medium"
+                >
                   Dashboard
                 </Link>
-                <Link to="/catalog" className="hover:text-blue-200">
+                <Link
+                  to="/catalog"
+                  className="text-white hover:text-gray-200 transition-colors font-medium"
+                >
                   Catálogo
                 </Link>
-                <Link to="/tickets" className="hover:text-blue-200">
+                <Link
+                  to="/tickets"
+                  className="text-white hover:text-gray-200 transition-colors font-medium"
+                >
                   Mis Tickets
                 </Link>
-                <Link to="/tickets/create" className="hover:text-blue-200">
+                <Link
+                  to="/tickets/create"
+                  className="text-white hover:text-gray-200 transition-colors font-medium"
+                >
                   Crear Ticket
                 </Link>
-                <span className="text-blue-200">
-                  {user?.email || 'Usuario'}
-                </span>
-                <button
-                  onClick={handleLogout}
-                  className="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded"
-                >
-                  Cerrar Sesión
-                </button>
+
+                {/* Usuario y logout */}
+                <div className="flex items-center gap-4 ml-6 border-l border-white/30 pl-6">
+                  <span className="text-white font-medium">
+                    {user?.email || 'Usuario'}
+                  </span>
+                  <button
+                    onClick={handleLogout}
+                    className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded transition-colors"
+                  >
+                    Cerrar Sesión
+                  </button>
+                </div>
               </>
             ) : (
               <>
-                <Link to="/login" className="hover:text-blue-200">
+                <Link
+                  to="/login"
+                  className="text-white hover:text-gray-200 transition-colors font-medium"
+                >
                   Iniciar Sesión
                 </Link>
                 <Link
                   to="/register"
-                  className="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded"
+                  className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded transition-colors font-medium"
                 >
                   Registrarse
                 </Link>

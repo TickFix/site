@@ -96,21 +96,21 @@ export const CreateTicket = () => {
   return (
     <Layout>
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6 text-gray-800">
+        <h1 className="text-3xl font-bold mb-6 text-white">
           Crear Nuevo Ticket
         </h1>
 
         {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+          <div className="bg-red-900/50 border border-red-500 text-red-200 px-4 py-3 rounded mb-4">
             {error}
           </div>
         )}
 
-        <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="bg-[#1A2332] border border-gray-700 p-6 rounded-lg shadow-md">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Category */}
             <div>
-              <label className="block text-gray-700 mb-2 font-semibold">
+              <label className="block text-gray-300 mb-2 font-semibold">
                 Categoría *
               </label>
               <select
@@ -118,7 +118,7 @@ export const CreateTicket = () => {
                 value={formData.category}
                 onChange={handleCategoryChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
               >
                 <option value="">Selecciona una categoría</option>
                 {categories.map((cat, index) => (
@@ -132,7 +132,7 @@ export const CreateTicket = () => {
             {/* Subcategory */}
             {selectedCategory && (
               <div>
-                <label className="block text-gray-700 mb-2 font-semibold">
+                <label className="block text-gray-300 mb-2 font-semibold">
                   Subcategoría *
                 </label>
                 <select
@@ -140,7 +140,7 @@ export const CreateTicket = () => {
                   value={formData.subcategory}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
                 >
                   <option value="">Selecciona una subcategoría</option>
                   {selectedCategory.subcategories.map((sub, index) => (
@@ -154,7 +154,7 @@ export const CreateTicket = () => {
 
             {/* Description */}
             <div>
-              <label className="block text-gray-700 mb-2 font-semibold">
+              <label className="block text-gray-300 mb-2 font-semibold">
                 Descripción del Problema *
               </label>
               <textarea
@@ -163,33 +163,33 @@ export const CreateTicket = () => {
                 onChange={handleChange}
                 required
                 rows="5"
-                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
                 placeholder="Describe detalladamente el problema..."
               />
             </div>
 
             {/* File Upload */}
-            <div className="border-t pt-6">
-              <label className="block text-gray-700 mb-2 font-semibold">
+            <div className="border-t border-gray-700 pt-6">
+              <label className="block text-gray-300 mb-2 font-semibold">
                 Adjuntar Evidencia (Opcional)
               </label>
               <div className="flex gap-2">
                 <input
                   type="file"
                   onChange={handleFileChange}
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-[#00BCD4] file:text-white file:cursor-pointer hover:file:bg-[#00ACC1] focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
                 />
                 <button
                   type="button"
                   onClick={handleFileUpload}
                   disabled={!file || uploading}
-                  className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 disabled:bg-gray-300 disabled:cursor-not-allowed"
+                  className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition-colors"
                 >
                   {uploading ? 'Subiendo...' : 'Subir'}
                 </button>
               </div>
               {uploadedFileKey && (
-                <p className="text-sm text-green-600 mt-2">
+                <p className="text-sm text-green-400 mt-2">
                   ✓ Archivo subido: {uploadedFileKey.split('/').pop()}
                 </p>
               )}
@@ -199,7 +199,7 @@ export const CreateTicket = () => {
             <button
               type="submit"
               disabled={creating || !formData.category || !formData.subcategory}
-              className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed font-semibold"
+              className="w-full bg-[#00BCD4] text-white py-3 rounded hover:bg-[#00ACC1] disabled:bg-gray-600 disabled:cursor-not-allowed font-semibold transition-colors"
             >
               {creating ? 'Creando Ticket...' : 'Crear Ticket'}
             </button>

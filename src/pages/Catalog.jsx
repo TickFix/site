@@ -72,36 +72,36 @@ export const Catalog = () => {
     <Layout>
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold text-gray-800">
+          <h1 className="text-3xl font-bold text-white">
             Gestión de Catálogo
           </h1>
           <button
             onClick={() => setShowForm(!showForm)}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-[#00BCD4] text-white px-4 py-2 rounded hover:bg-[#00ACC1] transition-colors"
           >
             {showForm ? 'Cancelar' : 'Nueva Categoría'}
           </button>
         </div>
 
         {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+          <div className="bg-red-900/50 border border-red-500 text-red-200 px-4 py-3 rounded mb-4">
             {error}
           </div>
         )}
 
         {success && (
-          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+          <div className="bg-green-900/50 border border-green-500 text-green-200 px-4 py-3 rounded mb-4">
             {success}
           </div>
         )}
 
         {/* Form */}
         {showForm && (
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h2 className="text-xl font-semibold mb-4">Crear Nueva Categoría</h2>
+          <div className="bg-[#1A2332] border border-gray-700 p-6 rounded-lg shadow-md mb-6">
+            <h2 className="text-xl font-semibold text-white mb-4">Crear Nueva Categoría</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-gray-700 mb-2">
+                <label className="block text-gray-300 mb-2">
                   Nombre de la Categoría
                 </label>
                 <input
@@ -110,13 +110,13 @@ export const Catalog = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
                   placeholder="ej: Hardware"
                 />
               </div>
 
               <div>
-                <label className="block text-gray-700 mb-2">
+                <label className="block text-gray-300 mb-2">
                   Subcategorías (separadas por comas)
                 </label>
                 <input
@@ -125,7 +125,7 @@ export const Catalog = () => {
                   value={formData.subcategories}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
                   placeholder="ej: Laptop, Desktop, Impresora, Monitor"
                 />
                 <p className="text-sm text-gray-500 mt-1">
@@ -135,7 +135,7 @@ export const Catalog = () => {
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+                className="w-full bg-[#00BCD4] text-white py-2 rounded hover:bg-[#00ACC1] transition-colors"
               >
                 Crear Categoría
               </button>
@@ -144,29 +144,29 @@ export const Catalog = () => {
         )}
 
         {/* Categories List */}
-        <div className="bg-white rounded-lg shadow-md">
+        <div className="bg-[#1A2332] border border-gray-700 rounded-lg shadow-md">
           <div className="p-6">
-            <h2 className="text-xl font-semibold mb-4">Categorías Existentes</h2>
+            <h2 className="text-xl font-semibold text-white mb-4">Categorías Existentes</h2>
 
             {loading ? (
-              <p className="text-gray-600">Cargando categorías...</p>
+              <p className="text-gray-400">Cargando categorías...</p>
             ) : categories.length === 0 ? (
-              <p className="text-gray-600">No hay categorías creadas todavía</p>
+              <p className="text-gray-400">No hay categorías creadas todavía</p>
             ) : (
               <div className="space-y-4">
                 {categories.map((category, index) => (
                   <div
                     key={index}
-                    className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                    className="border border-gray-600 rounded-lg p-4 hover:shadow-md transition-shadow hover:border-[#00BCD4]"
                   >
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                    <h3 className="text-lg font-semibold text-white mb-2">
                       {category.name}
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {category.subcategories.map((sub, subIndex) => (
                         <span
                           key={subIndex}
-                          className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                          className="bg-[#00BCD4]/20 text-[#00BCD4] px-3 py-1 rounded-full text-sm border border-[#00BCD4]/30"
                         >
                           {sub}
                         </span>

@@ -39,8 +39,8 @@ export const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <div className="flex items-center justify-center min-h-screen bg-[#0F1C2E]">
+      <div className="bg-[#1A2332] p-8 rounded-lg shadow-xl w-full max-w-md border border-gray-700">
         {/* Logo */}
         <div className="flex justify-center mb-6">
           <img 
@@ -50,39 +50,39 @@ export const Login = () => {
           />
         </div>
 
-        <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
+        <h2 className="text-2xl font-bold mb-6 text-center text-white">
           Iniciar Sesión
         </h2>
 
         {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+          <div className="bg-red-900/50 border border-red-500 text-red-200 px-4 py-3 rounded mb-4">
             {error}
           </div>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-gray-700 mb-2">Email</label>
+            <label className="block text-gray-300 mb-2">Email</label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
               placeholder="tu@email.com"
             />
           </div>
 
           <div>
-            <label className="block text-gray-700 mb-2">Contraseña</label>
+            <label className="block text-gray-300 mb-2">Contraseña</label>
             <input
               type="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 bg-[#0F1C2E] border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00BCD4] focus:border-transparent"
               placeholder="••••••••"
             />
           </div>
@@ -90,15 +90,15 @@ export const Login = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 disabled:bg-blue-300 disabled:cursor-not-allowed"
+            className="w-full bg-[#00BCD4] text-white py-2 rounded hover:bg-[#00ACC1] disabled:bg-gray-600 disabled:cursor-not-allowed transition-colors"
           >
             {loading ? 'Iniciando sesión...' : 'Iniciar Sesión'}
           </button>
         </form>
 
-        <p className="mt-4 text-center text-gray-600">
+        <p className="mt-4 text-center text-gray-400">
           ¿No tienes cuenta?{' '}
-          <Link to="/register" className="text-blue-600 hover:underline">
+          <Link to="/register" className="text-[#00BCD4] hover:underline">
             Regístrate aquí
           </Link>
         </p>
