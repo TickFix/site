@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Layout } from '../components/Layout';  // 🆕 AGREGAR ESTA LÍNEA
 import { EditCategoryModal } from '../components/EditCategoryModal';
 
 export const Catalog = () => {
@@ -81,15 +82,17 @@ export const Catalog = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#0F1C2E] flex items-center justify-center">
-        <div className="text-white text-xl">Cargando categorías...</div>
-      </div>
+      <Layout>
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <div className="text-white text-xl">Cargando categorías...</div>
+        </div>
+      </Layout>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#0F1C2E] py-8">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <Layout>
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold text-white">Catálogo de Servicios</h1>
@@ -241,6 +244,6 @@ export const Catalog = () => {
           />
         )}
       </div>
-    </div>
+    </Layout>
   );
 };
