@@ -12,7 +12,7 @@ export const Catalog = () => {
   const [newName, setNewName] = useState('');
   const [newSubcategories, setNewSubcategories] = useState('');
 
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+  const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
   // Cargar categorías
   const loadCategories = async () => {

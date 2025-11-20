@@ -13,7 +13,7 @@ export const EditCategoryModal = ({ category, onClose, onUpdate }) => {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/catalog/categories/${category.pk}`,
+        `${import.meta.env.VITE_API_BASE_URL}/catalog/categories/${category.pk}`,
         {
           method: 'PUT',
           headers: {
